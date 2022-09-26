@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "containers": {
+    "website": {
+      "name": "website",
+      "image": {
+        "name": "website",
+        "origin": {
+          "type": "docker-hub",
+          "details": {
+            "target": "cycleplatform/getting-started:latest"
+          }
+        }
+      },
+      "config": {
+        "network": {
+          "public": "enable",
+          "hostname": "simplews",
+          "ports": ["80:80"]
+        },
+        "deploy": {
+          "instances": 1
+        }
+      }
+    }
+  }
+}
